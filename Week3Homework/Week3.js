@@ -1,5 +1,3 @@
-
-
 const pizzaTopping = ["Bacon", "Sausage", "Cheese", "pepperoni"];
 
 function greetCustomer() {
