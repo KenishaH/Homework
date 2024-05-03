@@ -1,40 +1,55 @@
 const pizzaTopping = ["Bacon", "Sausage", "Cheese", "pepperoni"];
 
 function greetCustomer() {
-  console.log("Hello Welcome to Pizza Place , Our toppings are");
-  for (let pizza of pizzaTopping) {
-    console.log(pizza);
+  let message = `Hello Welcome to Pizza Place , Our toppings are:`;
+
+  for (let topping of pizzaTopping) {
+    message += `${topping},`;
   }
+  console.log(message);
 }
 greetCustomer();
 
-const order = {
-  size: "Small",
-  crust: "Thick",
-  toppings: ["Bacon", "Sausage", "Cheese", "pepperoni"],
+// eslint-disable-next-line no-undef
 
-};
-//const size = ["small", "medium", "large"];
-//const crust = ["thick", "thin"];
+function getPizzaOrder(size, crust, ...toppings) {
+  let message = `One ${size} ${crust} crust pizza with `;
 
-function getPizzaOrdeer(size, crust, ...toppings) {
-  for (let num in order) {
-    console.log(
-      `One ${order.size}, ${order.crust} crust and ${order.toppings} coming up!`
-    );
+  for (let topping of toppings) {
+    message += `${topping},`;
   }
-}
-getPizzaOrdeer();
+  message += ",.... coming up!";
 
-function preparePizza() {
-  console.log("Cooking up");
-  for (let key in order) {
-    console.log(`${key} => ${order[key]}`);
+  console.log(message);
+  return [size, crust, toppings];
+}
+// Invoking function
+getPizzaOrder('Small', 'Hand Toss', 'Sasuage', 'Bacon');
+
+function preparePizza([size, crust, toppings]) {
+  console.log("C...cooking pizza...");
+
+  // return  an object
+
+  return {
+    size: size,
+    crust: crust,
+    toppings: toppings
+  };
+}
+
+function servePizza(pizza) {
+  let message = `Order up! Here's your ${pizza.size} ${pizza.crust} crust pizza with `;
+  for (let topping of pizza.toppings) {
+    message += `${topping},`;
   }
-}
-preparePizza();
+  message += ".. Enjoy";
+  console.log(message);
+  return pizza;
 
-function servePizza(){
-  console.log(`Order up here is your ${order.size},${order.toppings}`);
-}
-servePizza();
+  // call each fucnction 
+  const orderArray = getPizzaOrder("Small", "thin", "Sasuage", "Bacon");
+  const orderObject =  preparePizza(orderArray);
+  const orderSameObject = servePizza(orderArray);
+
+servePizza(preparePizza(getPizzaOrder('medium','thin','sausage','bacon')))
