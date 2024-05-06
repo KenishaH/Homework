@@ -24,10 +24,10 @@ function getPizzaOrder(size, crust, ...toppings) {
   return [size, crust, toppings];
 }
 // Invoking function
-getPizzaOrder('Small', 'Hand Toss', 'Sasuage', 'Bacon');
+getPizzaOrder('Small', 'thin', 'Sasuage', 'Bacon');
 
 function preparePizza([size, crust, toppings]) {
-  console.log("C...cooking pizza...");
+  console.log("...cooking pizza...");
 
   // return  an object
 
