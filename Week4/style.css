@@ -1,0 +1,18 @@
+
+/* complex selector */
+h1,h2 {
+  color: pink;
+  padding: 5px;
+  margin: 5px;
+
+}
+/* tARGETING A ID */
+
+#unorderedLIST > li {
+  color: red;
+}
+
+ol li {
+  color: blue;
+  border: 1px;
+}
