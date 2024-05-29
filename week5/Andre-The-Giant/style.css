@@ -15,6 +15,7 @@ h1 {
 
 img {
   height: 100%;
+  max-width: 100%;
 }
 
 div {
@@ -35,26 +36,5 @@ div {
 
 #pro {
   width: auto;
-}
-
-@media (max-width: 375px , min-width:667) {
-  img {
-      max-width: 100%;
-      height: auto; /* Ensure images don't get distorted */
-  }
-  #bio, #introPic {
-      float: none; /* Stop floating on small screens */
-      width: auto; /* Take full width */
-      margin: 0 auto; /* Center align if necessary */
-  }
-  #bio {
-      font-size: 14px; /* Smaller font size */
-      padding: 10px; /* Adjust padding */
-  }
-  div {
-      padding: 5px; /* Reduce padding for smaller screens */
-  }
-  a {
-      font-size: 16px;
 }
 

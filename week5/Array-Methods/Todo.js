@@ -1,4 +1,5 @@
-[
+ const todo =
+ [
   {
     "userId": 1,
     "id": 1,
@@ -301,11 +302,10 @@
   }
 ]
 //create a list of user 3's to-dos
-const userThree =data.filter(
-  task => task.userId === 6);
+const userThree = todo.filter(
+  task => task.userId === 3);
   console.log(userThree);
 //find the number of user 3's incomplete tasks
 const userThreeIncomplete = userThreeTask.filter(
-  task => task.completed === false
-);
+  task => !task.completed);
 console.log(userThreeIncomplete);

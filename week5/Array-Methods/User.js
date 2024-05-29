@@ -1,4 +1,5 @@
-[
+const users =
+ [
   {
     "id": 1,
     "name": "Leanne Graham",
@@ -230,15 +231,15 @@
     }
   }
 ]
+const phoneList = users.map{users => users.phone};
+console.log (phoneList);
 
-const phoneNumber = [];
-data.forEach(user => console.log(user.phone))
-console.log (phoneNumber);
-
-const pairs =[];
+const list =[];
 data.forEach( user =>{
-  let web = user.website ;
-  let email = user.email;
-
-  pairs.push([web,email])
+ list.push[{
+  website: user.website,
+  email: user.email,
+  company: user.company.name
+ }]
 });
+console.log(list);

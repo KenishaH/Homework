@@ -1,4 +1,4 @@
-[
+const post = [
   {
     "userId": 1,
     "id": 1,
@@ -307,10 +307,12 @@ console.log(userFivePost);
 
 //Then, create a list of title and body pairs
 
-const pairs =[];
+const list =[];
 data.forEach(user =>{
-  let body = user.body
-  let title = user.title
+  list.push[{
+   body : user.body,
+   title : user.title 
+  }]
 });
 console.log(pairs);
 
